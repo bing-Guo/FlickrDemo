@@ -2,6 +2,7 @@ import Foundation
 import RealmSwift
 
 class PhotoListViewModel {
+    let favoriteManager = FavoriteManager.sharedInstance
     let farm: Int
     let secret: String
     let id: String
@@ -18,7 +19,7 @@ class PhotoListViewModel {
         self.id = id
         self.server = server
         self.title = title
-        self.like = PhotoListViewModel.isPhotoExistedFavorite(id: id)
+        self.like = favoriteManager.isExistedInFavorite(id: id)
     }
     
     init(photo: Photo) {
@@ -27,7 +28,7 @@ class PhotoListViewModel {
         self.id = photo.id
         self.server = photo.server
         self.title = photo.title
-        self.like = PhotoListViewModel.isPhotoExistedFavorite(id: photo.id)
+        self.like = favoriteManager.isExistedInFavorite(id: photo.id)
     }
     
     init(photo: PhotoRealm) {
@@ -37,13 +38,5 @@ class PhotoListViewModel {
         self.server = photo.server
         self.title = photo.title
         self.like = true
-    }
-    
-    static func isPhotoExistedFavorite(id: String) -> Bool {
-        let realm = try! Realm()
-        
-        let result = realm.objects(PhotoRealm.self).filter("id = '\(id)'")
-        
-        return (result.count > 0)
     }
 }
