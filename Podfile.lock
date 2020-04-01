@@ -1,0 +1,30 @@
+PODS:
+  - FlexLayout (1.3.17)
+  - PinLayout (1.8.13)
+  - Realm (4.3.1):
+    - Realm/Headers (= 4.3.1)
+  - Realm/Headers (4.3.1)
+  - RealmSwift (4.3.1):
+    - Realm (= 4.3.1)
+
+DEPENDENCIES:
+  - FlexLayout
+  - PinLayout
+  - RealmSwift
+
+SPEC REPOS:
+  trunk:
+    - FlexLayout
+    - PinLayout
+    - Realm
+    - RealmSwift
+
+SPEC CHECKSUMS:
+  FlexLayout: 257b6763526bc957d2abc2b77a05760b86ca0e21
+  PinLayout: e41a50260a76508b7a7fcee8955c76639adc69bc
+  Realm: 31dc40934081ef740f60feedc46d88473cbfeb40
+  RealmSwift: b5199e9a41f67b99f51acf6874a6166f5fbe93d1
+
+PODFILE CHECKSUM: 40e2f6beee905bb5a34c7dbf18701fd44fc51ab8
+
+COCOAPODS: 1.8.4
