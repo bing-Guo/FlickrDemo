@@ -8,7 +8,6 @@ class FavoriteViewController: UIViewController {
     
     override func loadView() {
         let view = SearchResultPageView()
-        view.delegate = self
         self.view = view
     }
     
@@ -39,10 +38,3 @@ class FavoriteViewController: UIViewController {
         }
     }
 }
-
-extension FavoriteViewController: SearchResultPageDelegate {
-    func endOfScrolling() {
-        return
-    }
-}
-
