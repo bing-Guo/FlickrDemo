@@ -5,7 +5,6 @@ class ViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UINavigationBar.appearance().backgroundColor = .clear
         tabBar.isTranslucent = false
         
         let searchVC = UINavigationController(rootViewController: SearchViewController())
